@@ -1,15 +1,16 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
-  "name": "0b1eeedf80733cab465e",
+  "name": "3fdd7187b9c4640e0bdb",
   "position": {
-    "x": 146.14173228346456,
-    "y": 114.22572178477689,
-    "z": 0,
+    "x": 932.28346456692907,
+    "y": 137.74278215223097,
+    "z": 1,
     "height": 280.52493438320209,
-    "width": 280.52493438320209
+    "width": 280.52493438320209,
+    "tabOrder": 1
   },
   "visual": {
-    "visualType": "barChart",
+    "visualType": "clusteredBarChart",
     "query": {
       "queryState": {
         "Category": {
@@ -22,11 +23,11 @@
                       "Entity": "financials"
                     }
                   },
-                  "Property": "Country"
+                  "Property": "Product"
                 }
               },
-              "queryRef": "financials.Country",
-              "nativeQueryRef": "Country",
+              "queryRef": "financials.Product",
+              "nativeQueryRef": "Recuento de Product",
               "active": true
             }
           ]
@@ -43,14 +44,14 @@
                           "Entity": "financials"
                         }
                       },
-                      "Property": "Sales"
+                      "Property": "Year"
                     }
                   },
                   "Function": 0
                 }
               },
-              "queryRef": "Sum(financials.Sales)",
-              "nativeQueryRef": "Sum of Sales"
+              "queryRef": "Sum(financials.Year)",
+              "nativeQueryRef": "Suma de Year"
             }
           ]
         }
@@ -67,7 +68,7 @@
                         "Entity": "financials"
                       }
                     },
-                    "Property": "Sales"
+                    "Property": "Year"
                   }
                 },
                 "Function": 0
@@ -84,7 +85,7 @@
   "filterConfig": {
     "filters": [
       {
-        "name": "3fa73de70c33965beac8",
+        "name": "6378ecf09add07e2a1e0",
         "field": {
           "Column": {
             "Expression": {
@@ -92,13 +93,13 @@
                 "Entity": "financials"
               }
             },
-            "Property": "Country"
+            "Property": "Product"
           }
         },
         "type": "Categorical"
       },
       {
-        "name": "e3ca4ca648dbe97d2c1a",
+        "name": "4502ef00cd5a2340d90c",
         "field": {
           "Aggregation": {
             "Expression": {
@@ -108,7 +109,7 @@
                     "Entity": "financials"
                   }
                 },
-                "Property": "Sales"
+                "Property": "Year"
               }
             },
             "Function": 0
