@@ -1,0 +1,40 @@
+table Medidas
+	lineageTag: 421b6286-730f-4076-ae8b-1136f4b5e110
+
+	measure 'Ventas Totales' = SUM ( 'financials'[Sales] )
+		lineageTag: 90ecd69b-b52a-4554-8fb9-d1024d7f5660
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Costo Total (COGS)' = SUM ( 'financials'[COGS] )
+		lineageTag: 152c0f2a-6a49-4d6c-8251-a8dfe26e9318
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Descuentos Totales' = SUM ( 'financials'[Discounts] )
+		lineageTag: fd0024f0-cb7a-40ff-9cf2-02905ed7481e
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Beneficio Total' = [Ventas Totales] - [Costo Total (COGS)] - [Descuentos Totales]
+		lineageTag: 0617567e-5365-4339-baf3-8350f022d33e
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Margen %' = DIVIDE ( [Beneficio Total], [Ventas Totales] )
+		lineageTag: 3e2731cf-32a1-4a57-b49b-46e739a5a6d2
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	partition Medidas = m
+		mode: import
+		source =
+				let
+				    Origen = Table.FromRows(Json.Document(Binary.Decompress(Binary.FromText("i44FAA==", BinaryEncoding.Base64), Compression.Deflate)), let _t = ((type nullable text) meta [Serialized.Text = true]) in type table [Columna1 = _t]),
+				    #"Tipo cambiado" = Table.TransformColumnTypes(Origen,{{"Columna1", type text}}),
+				    #"Columnas quitadas" = Table.RemoveColumns(#"Tipo cambiado",{"Columna1"})
+				in
+				    #"Columnas quitadas"
+
+	annotation PBI_ResultType = Table
+
