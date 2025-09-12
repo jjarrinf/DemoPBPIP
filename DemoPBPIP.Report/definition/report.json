@@ -9,6 +9,15 @@
         "page": "1.3.95"
       },
       "type": "SharedResources"
+    },
+    "customTheme": {
+      "name": "Innovate",
+      "reportVersionAtImport": {
+        "visual": "2.1.0",
+        "report": "2.1.0",
+        "page": "2.0.0"
+      },
+      "type": "SharedResources"
     }
   },
   "objects": {
@@ -48,6 +57,11 @@
           "name": "CY24SU10",
           "path": "BaseThemes/CY24SU10.json",
           "type": "BaseTheme"
+        },
+        {
+          "name": "Innovate",
+          "path": "BuiltInThemes/Innovate.json",
+          "type": "CustomTheme"
         }
       ]
     }

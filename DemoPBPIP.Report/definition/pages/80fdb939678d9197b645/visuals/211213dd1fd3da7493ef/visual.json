@@ -1,38 +1,19 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
-  "name": "5359ff62a4fe9d9527af",
+  "name": "211213dd1fd3da7493ef",
   "position": {
-    "x": 80.816326530612244,
-    "y": 440.81632653061223,
-    "z": 2000,
-    "height": 255.67346938775509,
-    "width": 502.53061224489795,
-    "tabOrder": 2000
+    "x": 243.91836734693877,
+    "y": 0,
+    "z": 4000,
+    "height": 130.77551020408163,
+    "width": 176.32653061224488,
+    "tabOrder": 4000
   },
   "visual": {
-    "visualType": "lineChart",
+    "visualType": "card",
     "query": {
       "queryState": {
-        "Category": {
-          "projections": [
-            {
-              "field": {
-                "Column": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "financials"
-                    }
-                  },
-                  "Property": "Country"
-                }
-              },
-              "queryRef": "financials.Country",
-              "nativeQueryRef": "Country",
-              "active": true
-            }
-          ]
-        },
-        "Y": {
+        "Values": {
           "projections": [
             {
               "field": {
@@ -42,11 +23,12 @@
                       "Entity": "Medidas"
                     }
                   },
-                  "Property": "Descuentos Totales"
+                  "Property": "Margen %"
                 }
               },
-              "queryRef": "Medidas.Descuentos Totales",
-              "nativeQueryRef": "Descuentos Totales"
+              "queryRef": "Medidas.Margen %",
+              "nativeQueryRef": "Margen %",
+              "format": "0 %;-0 %;0 %"
             }
           ]
         }
@@ -61,7 +43,7 @@
                     "Entity": "Medidas"
                   }
                 },
-                "Property": "Descuentos Totales"
+                "Property": "Margen %"
               }
             },
             "direction": "Descending"
@@ -70,14 +52,40 @@
         "isDefaultSort": true
       }
     },
-    "objects": {
-      "labels": [
+    "visualContainerObjects": {
+      "border": [
         {
           "properties": {
             "show": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
+                  "Value": "false"
+                }
+              }
+            },
+            "radius": {
+              "expr": {
+                "Literal": {
+                  "Value": "30D"
+                }
+              }
+            },
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            },
+            "width": {
+              "expr": {
+                "Literal": {
+                  "Value": "2D"
                 }
               }
             }
