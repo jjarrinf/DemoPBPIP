@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
   "name": "14fc47b61ef4cdb85fad",
   "position": {
-    "x": 68.780487804878049,
-    "y": 43.90243902439024,
+    "x": 68.9168765743073,
+    "y": 79.7984886649874,
     "z": 2,
-    "height": 280.97560975609758,
-    "width": 355.609756097561,
+    "height": 244.83627204030225,
+    "width": 355.4659949622166,
     "tabOrder": 2
   },
   "visual": {
@@ -36,17 +36,22 @@
           "projections": [
             {
               "field": {
-                "Measure": {
+                "Aggregation": {
                   "Expression": {
-                    "SourceRef": {
-                      "Entity": "Medidas"
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "financials"
+                        }
+                      },
+                      "Property": " Sales"
                     }
                   },
-                  "Property": "Beneficio Total"
+                  "Function": 0
                 }
               },
-              "queryRef": "Medidas.Beneficio Total",
-              "nativeQueryRef": "Beneficio Total"
+              "queryRef": "Sum(financials. Sales)",
+              "nativeQueryRef": "Sum of  Sales"
             }
           ]
         }
@@ -55,13 +60,18 @@
         "sort": [
           {
             "field": {
-              "Measure": {
+              "Aggregation": {
                 "Expression": {
-                  "SourceRef": {
-                    "Entity": "Medidas"
+                  "Column": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "financials"
+                      }
+                    },
+                    "Property": " Sales"
                   }
                 },
-                "Property": "Beneficio Total"
+                "Function": 0
               }
             },
             "direction": "Descending"

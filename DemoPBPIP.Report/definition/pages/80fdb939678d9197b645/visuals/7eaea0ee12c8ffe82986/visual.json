@@ -2,11 +2,11 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
   "name": "7eaea0ee12c8ffe82986",
   "position": {
-    "x": 749.26829268292681,
-    "y": 390.73170731707319,
+    "x": 631.13350125944578,
+    "y": 383.57682619647352,
     "z": 5,
-    "height": 267.80487804878049,
-    "width": 465.36585365853659,
+    "height": 274.7607052896725,
+    "width": 605.74307304785884,
     "tabOrder": 5
   },
   "visual": {
@@ -36,17 +36,22 @@
           "projections": [
             {
               "field": {
-                "Measure": {
+                "Aggregation": {
                   "Expression": {
-                    "SourceRef": {
-                      "Entity": "Medidas"
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "financials"
+                        }
+                      },
+                      "Property": " Sales"
                     }
                   },
-                  "Property": "Ventas Totales"
+                  "Function": 0
                 }
               },
-              "queryRef": "Medidas.Ventas Totales",
-              "nativeQueryRef": "Ventas Totales"
+              "queryRef": "Sum(financials. Sales)",
+              "nativeQueryRef": "Sum of  Sales"
             }
           ]
         }

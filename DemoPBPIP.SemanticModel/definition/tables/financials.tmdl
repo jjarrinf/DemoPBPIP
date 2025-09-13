@@ -81,16 +81,6 @@ table financials
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	column Sales
-		dataType: double
-		lineageTag: db0492e9-cea9-45a1-b607-799f7bd7f5a2
-		summarizeBy: sum
-		sourceColumn: Sales
-
-		annotation SummarizationSetBy = Automatic
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
-
 	column COGS
 		dataType: double
 		lineageTag: 4c9dd987-455d-464f-b1a4-c1365c261084
@@ -148,15 +138,27 @@ table financials
 
 		annotation SummarizationSetBy = Automatic
 
+	column ' Sales'
+		dataType: double
+		lineageTag: c771ce45-f132-4d7d-8624-4d24d1cb3639
+		summarizeBy: sum
+		sourceColumn: " Sales"
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
 	partition financials = m
 		mode: import
 		source =
 				let
-				 Source = Excel.Workbook(File.Contents("C:\Program Files\WindowsApps\Microsoft.MicrosoftPowerBIDesktop_2.146.1133.0_x64__8wekyb3d8bbwe\bin\SampleData\Financial Sample.xlsx"), null, true),
+				 Source = Excel.Workbook(File.Contents("C:\Code\DemoPBPIP\DataSource\Financial Sample.xlsx"), null, true),
 				    financials_Table = Source{[Item="financials",Kind="Table"]}[Data],
-				    #"Changed Type" = Table.TransformColumnTypes(financials_Table,{{"Segment", type text}, {"Country", type text}, {"Product", type text}, {"Discount Band", type text}, {"Units Sold", type number}, {"Manufacturing Price", Int64.Type}, {"Sale Price", Int64.Type}, {"Gross Sales", type number}, {"Discounts", type number}, {"Sales", type number}, {"COGS", type number}, {"Profit", type number}, {"Date", type date}, {"Month Number", Int64.Type}, {"Month Name", type text}, {"Year", Int64.Type}})
+				    #"Changed Type" = Table.TransformColumnTypes(financials_Table,{{"Segment", type text}, {"Country", type text}, {"Product", type text}, {"Discount Band", type text}, {"Units Sold", type number}, {"Manufacturing Price", Int64.Type}, {"Sale Price", Int64.Type}, {"Gross Sales", type number}, {"Discounts", type number}, {" Sales", type number}, {"COGS", type number}, {"Profit", type number}, {"Date", type date}, {"Month Number", Int64.Type}, {"Month Name", type text}, {"Year", Int64.Type}})
 				in
-				 #"Changed Type"
+				    #"Changed Type"
 
 	annotation PBI_ResultType = Table
+
+	annotation PBI_NavigationStepName = Navigation
 
