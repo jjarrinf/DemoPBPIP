@@ -35,17 +35,22 @@
           "projections": [
             {
               "field": {
-                "Measure": {
+                "Aggregation": {
                   "Expression": {
-                    "SourceRef": {
-                      "Entity": "Medidas"
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "financials"
+                        }
+                      },
+                      "Property": " Sales"
                     }
                   },
-                  "Property": "Beneficio Total"
+                  "Function": 0
                 }
               },
-              "queryRef": "Medidas.Beneficio Total",
-              "nativeQueryRef": "Beneficio Total"
+              "queryRef": "Sum(financials. Sales)",
+              "nativeQueryRef": "Sum of  Sales"
             }
           ]
         }
@@ -54,13 +59,18 @@
         "sort": [
           {
             "field": {
-              "Measure": {
+              "Aggregation": {
                 "Expression": {
-                  "SourceRef": {
-                    "Entity": "Medidas"
+                  "Column": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "financials"
+                      }
+                    },
+                    "Property": " Sales"
                   }
                 },
-                "Property": "Beneficio Total"
+                "Function": 0
               }
             },
             "direction": "Descending"

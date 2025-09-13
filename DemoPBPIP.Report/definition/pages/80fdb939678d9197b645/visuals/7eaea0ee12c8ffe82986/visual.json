@@ -36,17 +36,22 @@
           "projections": [
             {
               "field": {
-                "Measure": {
+                "Aggregation": {
                   "Expression": {
-                    "SourceRef": {
-                      "Entity": "Medidas"
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "financials"
+                        }
+                      },
+                      "Property": " Sales"
                     }
                   },
-                  "Property": "Ventas Totales"
+                  "Function": 0
                 }
               },
-              "queryRef": "Medidas.Ventas Totales",
-              "nativeQueryRef": "Ventas Totales"
+              "queryRef": "Sum(financials. Sales)",
+              "nativeQueryRef": "Sum of  Sales"
             }
           ]
         }
