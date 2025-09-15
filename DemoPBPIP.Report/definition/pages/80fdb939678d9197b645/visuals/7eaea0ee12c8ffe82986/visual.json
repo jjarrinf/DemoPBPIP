@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
   "name": "7eaea0ee12c8ffe82986",
   "position": {
     "x": 661.22448979591832,
@@ -7,10 +7,10 @@
     "z": 3000,
     "height": 273.30612244897958,
     "width": 555.42857142857144,
-    "tabOrder": 3000
+    "tabOrder": 2000
   },
   "visual": {
-    "visualType": "columnChart",
+    "visualType": "clusteredColumnChart",
     "query": {
       "queryState": {
         "Category": {
@@ -18,16 +18,12 @@
             {
               "field": {
                 "Column": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "financials"
-                    }
-                  },
-                  "Property": "Date"
+                  "Expression": { "SourceRef": { "Entity": "financials" } },
+                  "Property": "Product"
                 }
               },
-              "queryRef": "financials.Date",
-              "nativeQueryRef": "Date",
+              "queryRef": "financials.Product",
+              "nativeQueryRef": "Product",
               "active": true
             }
           ]
@@ -36,22 +32,14 @@
           "projections": [
             {
               "field": {
-                "Aggregation": {
-                  "Expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "financials"
-                        }
-                      },
-                      "Property": " Sales"
-                    }
-                  },
-                  "Function": 0
+                "Measure": {
+                  "Expression": { "SourceRef": { "Entity": "Medidas" } },
+                  "Property": "Beneficio Total"
                 }
               },
-              "queryRef": "Sum(financials. Sales)",
-              "nativeQueryRef": "Sum of  Sales"
+              "queryRef": "Medidas.Beneficio Total",
+              "nativeQueryRef": "Beneficio Total",
+              "format": "\"S/\" #,0;-\"S/\" #,0;\"S/\" #,0"
             }
           ]
         }
@@ -60,16 +48,12 @@
         "sort": [
           {
             "field": {
-              "Column": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "financials"
-                  }
-                },
-                "Property": "Date"
+              "Measure": {
+                "Expression": { "SourceRef": { "Entity": "Medidas" } },
+                "Property": "Beneficio Total"
               }
             },
-            "direction": "Ascending"
+            "direction": "Descending"
           }
         ],
         "isDefaultSort": true
@@ -79,13 +63,7 @@
       "labels": [
         {
           "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            }
+            "show": { "expr": { "Literal": { "Value": "true" } } }
           }
         }
       ]

@@ -1,0 +1,174 @@
+table Fechas
+	lineageTag: 8ba924bd-4286-4f9a-9c3d-3d4818fa9a38
+
+	column Date
+		formatString: General Date
+		lineageTag: 7cca417c-cf76-4faf-a918-947de9bedc82
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Date]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Año
+		formatString: 0
+		lineageTag: c68eb16e-0538-42dc-b037-ba77b30bbf4a
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Año]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Mes Nº'
+		formatString: 0
+		lineageTag: 185a3448-a6a1-4ece-98f8-12ba2544440c
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Mes Nº]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Mes
+		lineageTag: 39bbd5fa-e552-4591-8e0f-b8c057e0de81
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Mes]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Mes corto'
+		lineageTag: ef762596-0123-4bf1-8dc8-af031c8a9d01
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Mes corto]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Año-Mes (texto)'
+		lineageTag: 9c704078-8460-42ae-8bc6-ccd8105fd79b
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Año-Mes (texto)]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'AñoMes (orden)'
+		formatString: 0
+		lineageTag: f1e112b4-2ae6-472e-82a6-fb2968f123fa
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [AñoMes (orden)]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Trim Nº'
+		formatString: 0
+		lineageTag: 498f6447-e388-4af1-88d9-132a8ef79f6d
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Trim Nº]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Trimestre
+		lineageTag: 76f9c6e1-8fd2-4d83-a56b-6fd95f04ed3c
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Trimestre]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Semana Año'
+		formatString: 0
+		lineageTag: 8c579ca8-1b38-4670-823b-8123af30eec2
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Semana Año]
+
+		annotation SummarizationSetBy = Automatic
+
+	column Día
+		formatString: 0
+		lineageTag: 19dfbfe4-bf41-4a64-9b3e-a68a014dd655
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Día]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Día sem Nº'
+		formatString: 0
+		lineageTag: 24a4c40b-67d4-40da-93e6-b5ed73a386da
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Día sem Nº]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Día semana'
+		lineageTag: 22dacd9c-412e-469a-94a4-8c958cd5f6a2
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Día semana]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Inicio de mes'
+		formatString: General Date
+		lineageTag: 7f24e144-3446-4c26-9da4-bb47306fa34f
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Inicio de mes]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Fin de mes'
+		formatString: General Date
+		lineageTag: cd9e6026-b9eb-4520-9296-4da2e10a9fbe
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Fin de mes]
+
+		annotation SummarizationSetBy = Automatic
+
+	column 'Es fin de semana'
+		formatString: """TRUE"";""TRUE"";""FALSE"""
+		lineageTag: 228cba2b-c338-4a65-b4c9-d7e4d4df3371
+		summarizeBy: none
+		isNameInferred
+		sourceColumn: [Es fin de semana]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Fechas = calculated
+		mode: import
+		source = ```
+				
+				VAR MinData = MINX ( ALL ( financials ), financials[Date] )
+				VAR MaxData = MAXX ( ALL ( financials ), financials[Date] )
+				VAR Inicio  = DATE ( YEAR ( MinData ) - 1, 1, 1 )
+				VAR Fin     = DATE ( YEAR ( MaxData ) + 1, 12, 31 )
+				RETURN
+				ADDCOLUMNS (
+				    CALENDAR ( Inicio, Fin ),
+				    "Año", YEAR ( [Date] ),
+				    "Mes Nº", MONTH ( [Date] ),
+				    "Mes", FORMAT ( [Date], "[$-es-ES]mmmm" ),
+				    "Mes corto", FORMAT ( [Date], "[$-es-ES]mmm" ),
+				    "Año-Mes (texto)", FORMAT ( [Date], "YYYY-MM" ),
+				    "AñoMes (orden)", YEAR ( [Date] ) * 100 + MONTH ( [Date] ),
+				    "Trim Nº", QUARTER ( [Date] ),
+				    "Trimestre", "T" & QUARTER ( [Date] ),
+				    "Semana Año", WEEKNUM ( [Date], 2 ),
+				    "Día", DAY ( [Date] ),
+				    "Día sem Nº", WEEKDAY ( [Date], 2 ),
+				    "Día semana", FORMAT ( [Date], "[$-es-ES]dddd" ),
+				    "Inicio de mes", DATE ( YEAR([Date]), MONTH([Date]), 1 ),
+				    "Fin de mes", EOMONTH ( [Date], 0 ),
+				    "Es fin de semana", WEEKDAY ( [Date], 2 ) > 5
+				)
+				
+				```
+
+	annotation PBI_Id = 316a78b7509e49f7814c322f51f5071c
+

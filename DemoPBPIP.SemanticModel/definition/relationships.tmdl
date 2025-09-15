@@ -1,0 +1,4 @@
+relationship 70f29e95-bb3c-46a1-4eae-ee07a6a768e8
+	fromColumn: financials.Date
+	toColumn: Fechas.Date
+
