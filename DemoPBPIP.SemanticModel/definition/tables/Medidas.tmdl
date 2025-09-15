@@ -1,28 +1,58 @@
 table Medidas
 	lineageTag: 421b6286-730f-4076-ae8b-1136f4b5e110
 
-	measure 'Ventas Totales' = SUM ( 'financials'[Sales] )
+	/// Calculates the total sales amount by summing the 'Sales' column from the 'financials' table.
+	measure 'Ventas Totales' = SUM ( financials[Sales] )
 		lineageTag: 90ecd69b-b52a-4554-8fb9-d1024d7f5660
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	measure 'Costo Total (COGS)' = SUM ( 'financials'[COGS] )
+	/// Calculates the total cost of goods sold by summing the 'COGS' column from the 'financials' table.
+	measure 'Costo Total (COGS)' = SUM ( financials[COGS] )
 		lineageTag: 152c0f2a-6a49-4d6c-8251-a8dfe26e9318
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	measure 'Descuentos Totales' = SUM ( 'financials'[Discounts] )
+	/// Calculates the total sum of discounts from the 'Discounts' column in the 'financials' table.
+	measure 'Descuentos Totales' = SUM ( financials[Discounts] )
 		lineageTag: fd0024f0-cb7a-40ff-9cf2-02905ed7481e
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
+	/// Calculates the total profit by subtracting total cost of goods sold and total discounts from total sales.
 	measure 'Beneficio Total' = [Ventas Totales] - [Costo Total (COGS)] - [Descuentos Totales]
 		lineageTag: 0617567e-5365-4339-baf3-8350f022d33e
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
+	/// Calculates the profit margin percentage by dividing total profit by total sales.
 	measure 'Margen %' = DIVIDE ( [Beneficio Total], [Ventas Totales] )
 		lineageTag: 3e2731cf-32a1-4a57-b49b-46e739a5a6d2
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Unidades Vendidas' = SUM ( financials[Units Sold] )
+		lineageTag: f41b32d8-4f50-4a18-b44b-4a3485c934f1
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Gross Sales Total' = SUM ( financials[Gross Sales] )
+		lineageTag: 26ba29c9-1dd8-42ec-b290-7daedc0dc1f6
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Profit Total Base' = SUM ( financials[Profit] )
+		lineageTag: b91d4c2b-7320-4f1d-96a9-66319b0c5cec
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Precio Promedio' = DIVIDE ( [Ventas Totales], [Unidades Vendidas] )
+		lineageTag: 35c398c0-2195-490d-b5f1-94664c579b0d
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Costo Unit Prom' = DIVIDE ( [Costo Total (COGS)], [Unidades Vendidas] )
+		lineageTag: b718e635-9c88-44be-ad0c-1d3c60fedb9f
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 

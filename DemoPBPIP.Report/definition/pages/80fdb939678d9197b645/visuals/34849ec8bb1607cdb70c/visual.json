@@ -1,13 +1,13 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
   "name": "34849ec8bb1607cdb70c",
   "position": {
-    "x": 551.0204081632653,
+    "x": 520.22346368715091,
     "y": 0,
-    "z": 4001,
-    "height": 130.77551020408163,
-    "width": 177.79591836734693,
-    "tabOrder": 4001
+    "z": 5000,
+    "height": 130.50279329608941,
+    "width": 286.03351955307267,
+    "tabOrder": 4000
   },
   "visual": {
     "visualType": "card",
@@ -17,22 +17,18 @@
           "projections": [
             {
               "field": {
-                "Aggregation": {
+                "Measure": {
                   "Expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "financials"
-                        }
-                      },
-                      "Property": "Country"
+                    "SourceRef": {
+                      "Entity": "Medidas"
                     }
                   },
-                  "Function": 5
+                  "Property": "Beneficio Total"
                 }
               },
-              "queryRef": "Min(financials.Country)",
-              "nativeQueryRef": "Recuento de Country"
+              "queryRef": "Medidas.Beneficio Total",
+              "nativeQueryRef": "Beneficio Total",
+              "format": "\"S/\" #,0;-\"S/\" #,0;\"S/\" #,0"
             }
           ]
         }
@@ -41,18 +37,13 @@
         "sort": [
           {
             "field": {
-              "Aggregation": {
+              "Measure": {
                 "Expression": {
-                  "Column": {
-                    "Expression": {
-                      "SourceRef": {
-                        "Entity": "financials"
-                      }
-                    },
-                    "Property": "Country"
+                  "SourceRef": {
+                    "Entity": "Medidas"
                   }
                 },
-                "Function": 5
+                "Property": "Beneficio Total"
               }
             },
             "direction": "Descending"

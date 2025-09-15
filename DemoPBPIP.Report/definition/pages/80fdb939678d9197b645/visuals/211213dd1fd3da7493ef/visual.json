@@ -1,13 +1,13 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
   "name": "211213dd1fd3da7493ef",
   "position": {
-    "x": 243.91836734693877,
+    "x": 850.77551020408157,
     "y": 0,
     "z": 4000,
     "height": 130.77551020408163,
     "width": 176.32653061224488,
-    "tabOrder": 4000
+    "tabOrder": 3000
   },
   "visual": {
     "visualType": "card",
@@ -28,7 +28,7 @@
               },
               "queryRef": "Medidas.Margen %",
               "nativeQueryRef": "Margen %",
-              "format": "0 %;-0 %;0 %"
+              "format": "0.0 %;-0.0 %;0.0 %"
             }
           ]
         }

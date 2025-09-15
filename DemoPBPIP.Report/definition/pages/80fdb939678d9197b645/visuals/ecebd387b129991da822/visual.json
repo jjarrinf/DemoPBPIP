@@ -1,13 +1,13 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
   "name": "ecebd387b129991da822",
   "position": {
-    "x": 819.91836734693879,
+    "x": 137.6536312849162,
     "y": 0,
-    "z": 4002,
-    "height": 130.77551020408163,
-    "width": 238.0408163265306,
-    "tabOrder": 4002
+    "z": 6000,
+    "height": 130.50279329608941,
+    "width": 345.02793296089391,
+    "tabOrder": 5000
   },
   "visual": {
     "visualType": "card",
@@ -28,7 +28,7 @@
               },
               "queryRef": "Medidas.Ventas Totales",
               "nativeQueryRef": "Ventas Totales",
-              "format": "#,0"
+              "format": "\"S/\" #,0;-\"S/\" #,0;\"S/\" #,0"
             }
           ]
         }

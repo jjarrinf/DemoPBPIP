@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
   "name": "7eaea0ee12c8ffe82986",
   "position": {
     "x": 661.22448979591832,
@@ -7,10 +7,10 @@
     "z": 3000,
     "height": 273.30612244897958,
     "width": 555.42857142857144,
-    "tabOrder": 3000
+    "tabOrder": 2000
   },
   "visual": {
-    "visualType": "columnChart",
+    "visualType": "clusteredColumnChart",
     "query": {
       "queryState": {
         "Category": {
@@ -23,11 +23,11 @@
                       "Entity": "financials"
                     }
                   },
-                  "Property": "Date"
+                  "Property": "Product"
                 }
               },
-              "queryRef": "financials.Date",
-              "nativeQueryRef": "Date",
+              "queryRef": "financials.Product",
+              "nativeQueryRef": "Product",
               "active": true
             }
           ]
@@ -42,11 +42,12 @@
                       "Entity": "Medidas"
                     }
                   },
-                  "Property": "Ventas Totales"
+                  "Property": "Beneficio Total"
                 }
               },
-              "queryRef": "Medidas.Ventas Totales",
-              "nativeQueryRef": "Ventas Totales"
+              "queryRef": "Medidas.Beneficio Total",
+              "nativeQueryRef": "Beneficio Total",
+              "format": "\"S/\" #,0;-\"S/\" #,0;\"S/\" #,0"
             }
           ]
         }
@@ -55,16 +56,16 @@
         "sort": [
           {
             "field": {
-              "Column": {
+              "Measure": {
                 "Expression": {
                   "SourceRef": {
-                    "Entity": "financials"
+                    "Entity": "Medidas"
                   }
                 },
-                "Property": "Date"
+                "Property": "Beneficio Total"
               }
             },
-            "direction": "Ascending"
+            "direction": "Descending"
           }
         ],
         "isDefaultSort": true

@@ -1,13 +1,12 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
   "name": "5d16cce703c776ad72d6",
   "position": {
-    "x": 661.22448979591832,
+    "x": 650.9387755102041,
     "y": 144,
     "z": 1000,
     "height": 279.18367346938777,
-    "width": 555.42857142857144,
-    "tabOrder": 1000
+    "width": 555.42857142857144
   },
   "visual": {
     "visualType": "donutChart",
@@ -47,7 +46,7 @@
               },
               "queryRef": "Medidas.Margen %",
               "nativeQueryRef": "Margen %",
-              "format": "0 %;-0 %;0 %"
+              "format": "0.0 %;-0.0 %;0.0 %"
             }
           ]
         }
@@ -73,6 +72,34 @@
     },
     "objects": {
       "labels": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "legend": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
         {
           "properties": {
             "show": {

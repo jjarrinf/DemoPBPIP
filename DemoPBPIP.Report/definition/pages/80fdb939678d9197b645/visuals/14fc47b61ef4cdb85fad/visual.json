@@ -1,15 +1,16 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
   "name": "14fc47b61ef4cdb85fad",
   "position": {
     "x": 80.816326530612244,
     "y": 144,
     "z": 0,
     "height": 279.18367346938777,
-    "width": 502.53061224489795
+    "width": 502.53061224489795,
+    "tabOrder": 6000
   },
   "visual": {
-    "visualType": "barChart",
+    "visualType": "lineStackedColumnComboChart",
     "query": {
       "queryState": {
         "Category": {
@@ -19,14 +20,14 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "financials"
+                      "Entity": "Fechas"
                     }
                   },
-                  "Property": "Product"
+                  "Property": "Año-Mes (texto)"
                 }
               },
-              "queryRef": "financials.Product",
-              "nativeQueryRef": "Product",
+              "queryRef": "Fechas.Año-Mes (texto)",
+              "nativeQueryRef": "Año-Mes (texto)",
               "active": true
             }
           ]
@@ -41,11 +42,12 @@
                       "Entity": "Medidas"
                     }
                   },
-                  "Property": "Beneficio Total"
+                  "Property": "Ventas Totales"
                 }
               },
-              "queryRef": "Medidas.Beneficio Total",
-              "nativeQueryRef": "Beneficio Total"
+              "queryRef": "Medidas.Ventas Totales",
+              "nativeQueryRef": "Ventas Totales",
+              "format": "\"S/\" #,0;-\"S/\" #,0;\"S/\" #,0"
             }
           ]
         }
@@ -60,7 +62,7 @@
                     "Entity": "Medidas"
                   }
                 },
-                "Property": "Beneficio Total"
+                "Property": "Ventas Totales"
               }
             },
             "direction": "Descending"

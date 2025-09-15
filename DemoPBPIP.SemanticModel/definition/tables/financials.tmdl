@@ -1,6 +1,8 @@
+/// financials
 table financials
 	lineageTag: f1e7f35e-86a7-4c7e-b382-9c8a80e597c8
 
+	/// Segment
 	column Segment
 		dataType: string
 		lineageTag: e22e97f1-1c9a-4ddf-a9c6-e3d20218b402
@@ -9,6 +11,7 @@ table financials
 
 		annotation SummarizationSetBy = Automatic
 
+	/// Country
 	column Country
 		dataType: string
 		lineageTag: 60f63843-aae5-479e-9434-2642d896c72f
@@ -17,6 +20,7 @@ table financials
 
 		annotation SummarizationSetBy = Automatic
 
+	/// Product
 	column Product
 		dataType: string
 		lineageTag: 0fa5a785-f140-400c-80ad-326a3e13fb53
@@ -25,6 +29,7 @@ table financials
 
 		annotation SummarizationSetBy = Automatic
 
+	/// Discount Band
 	column 'Discount Band'
 		dataType: string
 		lineageTag: bd4f95b3-3a12-4312-8d30-e84355fbb4b9
@@ -33,6 +38,7 @@ table financials
 
 		annotation SummarizationSetBy = Automatic
 
+	/// Units Sold
 	column 'Units Sold'
 		dataType: double
 		lineageTag: e3123e33-d89d-4101-8ba5-20116eb324e1
@@ -43,6 +49,7 @@ table financials
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
+	/// Manufacturing Price
 	column 'Manufacturing Price'
 		dataType: int64
 		formatString: 0
@@ -52,6 +59,7 @@ table financials
 
 		annotation SummarizationSetBy = Automatic
 
+	/// Sale Price
 	column 'Sale Price'
 		dataType: int64
 		formatString: 0
@@ -61,6 +69,7 @@ table financials
 
 		annotation SummarizationSetBy = Automatic
 
+	/// Gross Sales
 	column 'Gross Sales'
 		dataType: double
 		lineageTag: ddf12a46-ca58-4164-be97-7d9018a9726b
@@ -71,6 +80,7 @@ table financials
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
+	/// Discounts
 	column Discounts
 		dataType: double
 		lineageTag: 7ac46e49-a7f6-4c38-bf45-d8a151af107c
@@ -81,6 +91,7 @@ table financials
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
+	/// Sales
 	column Sales
 		dataType: double
 		lineageTag: db0492e9-cea9-45a1-b607-799f7bd7f5a2
@@ -91,6 +102,7 @@ table financials
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
+	/// COGS
 	column COGS
 		dataType: double
 		lineageTag: 4c9dd987-455d-464f-b1a4-c1365c261084
@@ -101,6 +113,7 @@ table financials
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
+	/// Profit
 	column Profit
 		dataType: double
 		lineageTag: d62d1576-5d8f-4b2d-b94d-263dea93bcbe
@@ -111,6 +124,7 @@ table financials
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
+	/// Date
 	column Date
 		dataType: dateTime
 		formatString: Long Date
@@ -122,6 +136,7 @@ table financials
 
 		annotation UnderlyingDateTimeDataType = Date
 
+	/// Month Number
 	column 'Month Number'
 		dataType: int64
 		formatString: 0
@@ -131,6 +146,7 @@ table financials
 
 		annotation SummarizationSetBy = Automatic
 
+	/// Month Name
 	column 'Month Name'
 		dataType: string
 		lineageTag: ab8576b5-b794-4d37-abc7-3149b4bd1488
@@ -139,6 +155,7 @@ table financials
 
 		annotation SummarizationSetBy = Automatic
 
+	/// Year
 	column Year
 		dataType: int64
 		formatString: 0

@@ -10,12 +10,13 @@ annotation __PBI_TimeIntelligenceEnabled = 0
 
 annotation PBI_QueryOrder = ["financials","Medidas"]
 
-annotation PBI_ProTooling = ["DevMode"]
+annotation PBI_ProTooling = ["DevMode","Copilot","CopilotMeasureDescriptions"]
 
 annotation __TEdtr = 1
 
 ref table financials
 ref table Medidas
+ref table Fechas
 
 ref role Germany
 ref role France
