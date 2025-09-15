@@ -1,0 +1,7 @@
+role CA-MX
+	modelPermission: read
+
+	tablePermission financials = [Country] IN {"Canada","Mexico"}
+
+	annotation PBI_Id = 7a6f3e7719394b32b048df7002df2e16
+
