@@ -18,11 +18,7 @@
             {
               "field": {
                 "Column": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "Fechas"
-                    }
-                  },
+                  "Expression": { "SourceRef": { "Entity": "Fechas" } },
                   "Property": "Año-Mes (texto)"
                 }
               },
@@ -37,11 +33,7 @@
             {
               "field": {
                 "Measure": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "Medidas"
-                    }
-                  },
+                  "Expression": { "SourceRef": { "Entity": "Medidas" } },
                   "Property": "Ventas Totales"
                 }
               },
@@ -57,11 +49,7 @@
           {
             "field": {
               "Measure": {
-                "Expression": {
-                  "SourceRef": {
-                    "Entity": "Medidas"
-                  }
-                },
+                "Expression": { "SourceRef": { "Entity": "Medidas" } },
                 "Property": "Ventas Totales"
               }
             },
@@ -75,27 +63,9 @@
       "labels": [
         {
           "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "enableTitleDataLabel": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            },
-            "enableDetailDataLabel": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            }
+            "show": { "expr": { "Literal": { "Value": "true" } } },
+            "enableTitleDataLabel": { "expr": { "Literal": { "Value": "false" } } },
+            "enableDetailDataLabel": { "expr": { "Literal": { "Value": "true" } } }
           }
         }
       ]

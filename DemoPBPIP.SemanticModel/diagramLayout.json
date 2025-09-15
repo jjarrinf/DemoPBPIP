@@ -3,48 +3,27 @@
   "diagrams": [
     {
       "ordinal": 0,
-      "scrollPosition": {
-        "x": 0,
-        "y": 0
-      },
+      "scrollPosition": { "x": 0, "y": 0 },
       "nodes": [
         {
-          "location": {
-            "x": 0,
-            "y": 0
-          },
+          "location": { "x": 0, "y": 0 },
           "nodeIndex": "financials",
           "nodeLineageTag": "f1e7f35e-86a7-4c7e-b382-9c8a80e597c8",
-          "size": {
-            "height": 395,
-            "width": 258
-          },
+          "size": { "height": 504, "width": 234 },
           "zIndex": 1
         },
         {
-          "location": {
-            "x": 312.28016359918217,
-            "y": 226.24744376278119
-          },
+          "location": { "x": 312.28016359918217, "y": 226.24744376278119 },
           "nodeIndex": "Medidas",
           "nodeLineageTag": "421b6286-730f-4076-ae8b-1136f4b5e110",
-          "size": {
-            "height": 218,
-            "width": 234
-          },
+          "size": { "height": 218, "width": 234 },
           "zIndex": 2
         },
         {
-          "location": {
-            "x": 306.50511247443762,
-            "y": 0
-          },
+          "location": { "x": 306.50511247443762, "y": 0 },
           "nodeIndex": "Fechas",
           "nodeLineageTag": "8ba924bd-4286-4f9a-9c3d-3d4818fa9a38",
-          "size": {
-            "height": 200,
-            "width": 234
-          },
+          "size": { "height": 200, "width": 234 },
           "zIndex": 3
         }
       ],
