@@ -35,18 +35,13 @@
           "projections": [
             {
               "field": {
-                "Aggregation": {
+                "Measure": {
                   "Expression": {
-                    "Column": {
-                      "Expression": {
-                        "SourceRef": {
-                          "Entity": "financials"
-                        }
-                      },
-                      "Property": " Sales"
+                    "SourceRef": {
+                      "Entity": "Medidas"
                     }
                   },
-                  "Function": 0
+                  "Property": "Margen %"
                 }
               },
               "queryRef": "Medidas.Margen %",
@@ -60,18 +55,13 @@
         "sort": [
           {
             "field": {
-              "Aggregation": {
+              "Measure": {
                 "Expression": {
-                  "Column": {
-                    "Expression": {
-                      "SourceRef": {
-                        "Entity": "financials"
-                      }
-                    },
-                    "Property": " Sales"
+                  "SourceRef": {
+                    "Entity": "Medidas"
                   }
                 },
-                "Function": 0
+                "Property": "Margen %"
               }
             },
             "direction": "Descending"

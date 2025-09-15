@@ -18,7 +18,11 @@
             {
               "field": {
                 "Column": {
-                  "Expression": { "SourceRef": { "Entity": "financials" } },
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "financials"
+                    }
+                  },
                   "Property": "Product"
                 }
               },
@@ -33,7 +37,11 @@
             {
               "field": {
                 "Measure": {
-                  "Expression": { "SourceRef": { "Entity": "Medidas" } },
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas"
+                    }
+                  },
                   "Property": "Beneficio Total"
                 }
               },
@@ -49,7 +57,11 @@
           {
             "field": {
               "Measure": {
-                "Expression": { "SourceRef": { "Entity": "Medidas" } },
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Medidas"
+                  }
+                },
                 "Property": "Beneficio Total"
               }
             },
@@ -63,7 +75,13 @@
       "labels": [
         {
           "properties": {
-            "show": { "expr": { "Literal": { "Value": "true" } } }
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
           }
         }
       ]

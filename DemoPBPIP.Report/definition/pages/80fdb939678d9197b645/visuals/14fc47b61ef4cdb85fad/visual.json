@@ -2,8 +2,8 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
   "name": "14fc47b61ef4cdb85fad",
   "position": {
-    "x": 80.816326530612244,
-    "y": 144,
+    "x": 58.775510204081634,
+    "y": 130.77551020408163,
     "z": 0,
     "height": 279.18367346938777,
     "width": 502.53061224489795,
@@ -18,7 +18,11 @@
             {
               "field": {
                 "Column": {
-                  "Expression": { "SourceRef": { "Entity": "Fechas" } },
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Fechas"
+                    }
+                  },
                   "Property": "Año-Mes (texto)"
                 }
               },
@@ -33,7 +37,11 @@
             {
               "field": {
                 "Measure": {
-                  "Expression": { "SourceRef": { "Entity": "Medidas" } },
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas"
+                    }
+                  },
                   "Property": "Ventas Totales"
                 }
               },
@@ -49,7 +57,11 @@
           {
             "field": {
               "Measure": {
-                "Expression": { "SourceRef": { "Entity": "Medidas" } },
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Medidas"
+                  }
+                },
                 "Property": "Ventas Totales"
               }
             },
@@ -63,9 +75,27 @@
       "labels": [
         {
           "properties": {
-            "show": { "expr": { "Literal": { "Value": "true" } } },
-            "enableTitleDataLabel": { "expr": { "Literal": { "Value": "false" } } },
-            "enableDetailDataLabel": { "expr": { "Literal": { "Value": "true" } } }
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "enableTitleDataLabel": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            },
+            "enableDetailDataLabel": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
           }
         }
       ]
