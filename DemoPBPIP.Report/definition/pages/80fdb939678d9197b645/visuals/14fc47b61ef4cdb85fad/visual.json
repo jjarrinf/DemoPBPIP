@@ -19,7 +19,7 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "financials"
+                      "Entity": "Financials"
                     }
                   },
                   "Property": "Product"
@@ -40,17 +40,17 @@
                     "Column": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "financials"
+                          "Entity": "Financials"
                         }
                       },
-                      "Property": " Sales"
+                      "Property": "Sales"
                     }
                   },
                   "Function": 0
                 }
               },
               "queryRef": "Sum(financials. Sales)",
-              "nativeQueryRef": "Sum of  Sales"
+              "nativeQueryRef": "Sum of Sales"
             }
           ]
         }
@@ -64,10 +64,10 @@
                   "Column": {
                     "Expression": {
                       "SourceRef": {
-                        "Entity": "financials"
+                        "Entity": "Financials"
                       }
                     },
-                    "Property": " Sales"
+                    "Property": "Sales"
                   }
                 },
                 "Function": 0

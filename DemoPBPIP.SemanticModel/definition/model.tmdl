@@ -10,13 +10,13 @@ annotation __PBI_TimeIntelligenceEnabled = 0
 
 annotation PBIDesktopVersion = 2.146.1454.0 (25.08)+901d6c338d1dea81ac3e53073ffb10469f0f37b8
 
-annotation PBI_QueryOrder = ["financials","Medidas"]
+annotation PBI_QueryOrder = ["Financials","Medidas"]
 
 annotation PBI_ProTooling = ["DevMode"]
 
 annotation __TEdtr = 1
 
-ref table financials
+ref table Financials
 ref table Medidas
 
 ref cultureInfo en-US

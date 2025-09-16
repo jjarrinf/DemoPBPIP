@@ -1,17 +1,17 @@
 table Medidas
 	lineageTag: 421b6286-730f-4076-ae8b-1136f4b5e110
 
-	measure 'Ventas Totales' = SUM ( 'financials'[Sales] )
+	measure 'Ventas Totales' = SUM ( 'Financials'[Sales] )
 		lineageTag: 90ecd69b-b52a-4554-8fb9-d1024d7f5660
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	measure 'Costo Total (COGS)' = SUM ( 'financials'[COGS] )
+	measure 'Costo Total (COGS)' = SUM ( 'Financials'[COGS] )
 		lineageTag: 152c0f2a-6a49-4d6c-8251-a8dfe26e9318
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	measure 'Descuentos Totales' = SUM ( 'financials'[Discounts] )
+	measure 'Descuentos Totales' = SUM ( 'Financials'[Discounts] )
 		lineageTag: fd0024f0-cb7a-40ff-9cf2-02905ed7481e
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}

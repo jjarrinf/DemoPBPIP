@@ -22,7 +22,7 @@
                     "Column": {
                       "Expression": {
                         "SourceRef": {
-                          "Entity": "financials"
+                          "Entity": "Financials"
                         }
                       },
                       "Property": "Country"
@@ -46,7 +46,7 @@
                   "Column": {
                     "Expression": {
                       "SourceRef": {
-                        "Entity": "financials"
+                        "Entity": "Financials"
                       }
                     },
                     "Property": "Country"

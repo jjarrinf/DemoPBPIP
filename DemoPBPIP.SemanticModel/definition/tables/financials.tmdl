@@ -1,4 +1,4 @@
-table financials
+table Financials
 	lineageTag: f1e7f35e-86a7-4c7e-b382-9c8a80e597c8
 
 	column Segment
@@ -138,25 +138,28 @@ table financials
 
 		annotation SummarizationSetBy = Automatic
 
-	column ' Sales'
+	column Sales
 		dataType: double
 		lineageTag: c771ce45-f132-4d7d-8624-4d24d1cb3639
 		summarizeBy: sum
-		sourceColumn: " Sales"
+		sourceColumn: Sales
 
 		annotation SummarizationSetBy = Automatic
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
-	partition financials = m
+	partition Financials = m
 		mode: import
 		source =
 				let
 				 Source = Excel.Workbook(File.Contents("C:\Code\DemoPBPIP\DataSource\Financial Sample.xlsx"), null, true),
 				    financials_Table = Source{[Item="financials",Kind="Table"]}[Data],
-				    #"Changed Type" = Table.TransformColumnTypes(financials_Table,{{"Segment", type text}, {"Country", type text}, {"Product", type text}, {"Discount Band", type text}, {"Units Sold", type number}, {"Manufacturing Price", Int64.Type}, {"Sale Price", Int64.Type}, {"Gross Sales", type number}, {"Discounts", type number}, {" Sales", type number}, {"COGS", type number}, {"Profit", type number}, {"Date", type date}, {"Month Number", Int64.Type}, {"Month Name", type text}, {"Year", Int64.Type}})
+				    #"Changed Type" = Table.TransformColumnTypes(financials_Table,{{"Segment", type text}, {"Country", type text}, {"Product", type text}, {"Discount Band", type text}, {"Units Sold", type number}, {"Manufacturing Price", Int64.Type}, {"Sale Price", Int64.Type}, {"Gross Sales", type number}, {"Discounts", type number}, {" Sales", type number}, {"COGS", type number}, {"Profit", type number}, {"Date", type date}, {"Month Number", Int64.Type}, {"Month Name", type text}, {"Year", Int64.Type}}),
+				    #"Renamed Columns" = Table.RenameColumns(#"Changed Type",{{" Sales", "Sales"}})
 				in
-				    #"Changed Type"
+				    #"Renamed Columns"
+
+	changedProperty = Name
 
 	annotation PBI_ResultType = Table
 
