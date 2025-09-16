@@ -8,15 +8,22 @@ model Model
 
 annotation __PBI_TimeIntelligenceEnabled = 0
 
-annotation PBI_QueryOrder = ["financials","Medidas"]
+annotation PBI_QueryOrder = ["Medidas","MyDateTable","financials","DSPath"]
 
 annotation PBI_ProTooling = ["DevMode","Copilot","CopilotMeasureDescriptions"]
 
 annotation __TEdtr = 1
 
-ref table Financials
+annotation PBIDesktopVersion = 2.146.1454.0 (25.08)+901d6c338d1dea81ac3e53073ffb10469f0f37b8
+
+annotation BestPracticeAnalyzer_IgnoreRules = {"RuleIDs":[]}
+
+annotation BestPracticeAnalyzer_ExternalRuleFiles = ["https://raw.githubusercontent.com/microsoft/Analysis-Services/master/BestPracticeRules/Spanish/BPARules.json"]
+
 ref table Medidas
 ref table Fechas
+ref table MyDateTable
+ref table financials
 
 ref role Germany
 ref role France

@@ -1,4 +1,4 @@
-relationship 70f29e95-bb3c-46a1-4eae-ee07a6a768e8
-	fromColumn: financials.Date
-	toColumn: Fechas.Date
+relationship AutoDetected_f5c9d9e3-7e5c-410a-a622-cdec11dd20f4
+	fromColumn: financials.MyDateTableId
+	toColumn: MyDateTable.Id
 
