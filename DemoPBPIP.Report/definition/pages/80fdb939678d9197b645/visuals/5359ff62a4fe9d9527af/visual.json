@@ -1,16 +1,16 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
   "name": "5359ff62a4fe9d9527af",
   "position": {
-    "x": 80.816326530612244,
-    "y": 440.81632653061223,
+    "x": 58.775510204081634,
+    "y": 432,
     "z": 2000,
     "height": 255.67346938775509,
     "width": 502.53061224489795,
-    "tabOrder": 2000
+    "tabOrder": 1000
   },
   "visual": {
-    "visualType": "lineChart",
+    "visualType": "barChart",
     "query": {
       "queryState": {
         "Category": {
@@ -42,11 +42,12 @@
                       "Entity": "Medidas"
                     }
                   },
-                  "Property": "Descuentos Totales"
+                  "Property": "Costo Unit Prom"
                 }
               },
-              "queryRef": "Medidas.Descuentos Totales",
-              "nativeQueryRef": "Descuentos Totales"
+              "queryRef": "Medidas.Costo Unit Prom",
+              "nativeQueryRef": "Costo Unit Prom",
+              "format": "\"S/\" #,0;-\"S/\" #,0;\"S/\" #,0"
             }
           ]
         }
@@ -61,7 +62,7 @@
                     "Entity": "Medidas"
                   }
                 },
-                "Property": "Descuentos Totales"
+                "Property": "Costo Unit Prom"
               }
             },
             "direction": "Descending"

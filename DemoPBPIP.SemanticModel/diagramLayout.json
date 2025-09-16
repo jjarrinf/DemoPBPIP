@@ -23,19 +23,33 @@
         },
         {
           "location": {
-            "x": 0,
-            "y": 0
+            "x": 312.28016359918217,
+            "y": 226.24744376278119
           },
-          "nodeIndex": "Financials",
+          "nodeIndex": "Medidas",
+          "nodeLineageTag": "421b6286-730f-4076-ae8b-1136f4b5e110",
           "size": {
-            "height": 504,
+            "height": 218,
             "width": 234
           },
-          "zIndex": 0
+          "zIndex": 2
+        },
+        {
+          "location": {
+            "x": 306.50511247443762,
+            "y": 0
+          },
+          "nodeIndex": "Fechas",
+          "nodeLineageTag": "8ba924bd-4286-4f9a-9c3d-3d4818fa9a38",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 3
         }
       ],
       "name": "All tables",
-      "zoomValue": 100,
+      "zoomValue": 89.724770642201833,
       "pinKeyFieldsToTop": false,
       "showExtraHeaderInfo": false,
       "hideKeyFieldsWhenCollapsed": false,

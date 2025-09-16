@@ -1,38 +1,19 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
-  "name": "14fc47b61ef4cdb85fad",
+  "name": "211213dd1fd3da7493ef",
   "position": {
-    "x": 58.775510204081634,
-    "y": 130.77551020408163,
-    "z": 0,
-    "height": 279.18367346938777,
-    "width": 502.53061224489795,
-    "tabOrder": 6000
+    "x": 850.77551020408157,
+    "y": 0,
+    "z": 4000,
+    "height": 130.77551020408163,
+    "width": 176.32653061224488,
+    "tabOrder": 3000
   },
   "visual": {
-    "visualType": "lineStackedColumnComboChart",
+    "visualType": "card",
     "query": {
       "queryState": {
-        "Category": {
-          "projections": [
-            {
-              "field": {
-                "Column": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "Fechas"
-                    }
-                  },
-                  "Property": "Año-Mes (texto)"
-                }
-              },
-              "queryRef": "Fechas.Año-Mes (texto)",
-              "nativeQueryRef": "Año-Mes (texto)",
-              "active": true
-            }
-          ]
-        },
-        "Y": {
+        "Values": {
           "projections": [
             {
               "field": {
@@ -42,12 +23,12 @@
                       "Entity": "Medidas"
                     }
                   },
-                  "Property": "Ventas Totales"
+                  "Property": "Margen %"
                 }
               },
-              "queryRef": "Medidas.Ventas Totales",
-              "nativeQueryRef": "Ventas Totales",
-              "format": "\"S/\" #,0;-\"S/\" #,0;\"S/\" #,0"
+              "queryRef": "Medidas.Margen %",
+              "nativeQueryRef": "Margen %",
+              "format": "0.0 %;-0.0 %;0.0 %"
             }
           ]
         }
@@ -62,7 +43,7 @@
                     "Entity": "Medidas"
                   }
                 },
-                "Property": "Ventas Totales"
+                "Property": "Margen %"
               }
             },
             "direction": "Descending"
@@ -71,28 +52,40 @@
         "isDefaultSort": true
       }
     },
-    "objects": {
-      "labels": [
+    "visualContainerObjects": {
+      "border": [
         {
           "properties": {
             "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "true"
-                }
-              }
-            },
-            "enableTitleDataLabel": {
               "expr": {
                 "Literal": {
                   "Value": "false"
                 }
               }
             },
-            "enableDetailDataLabel": {
+            "radius": {
               "expr": {
                 "Literal": {
-                  "Value": "true"
+                  "Value": "30D"
+                }
+              }
+            },
+            "color": {
+              "solid": {
+                "color": {
+                  "expr": {
+                    "ThemeDataColor": {
+                      "ColorId": 0,
+                      "Percent": 0
+                    }
+                  }
+                }
+              }
+            },
+            "width": {
+              "expr": {
+                "Literal": {
+                  "Value": "2D"
                 }
               }
             }
