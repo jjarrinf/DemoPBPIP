@@ -10,10 +10,10 @@
     "tabOrder": 1000
   },
   "visual": {
-    "visualType": "barChart",
+    "visualType": "treemap",
     "query": {
       "queryState": {
-        "Category": {
+        "Group": {
           "projections": [
             {
               "field": {
@@ -32,7 +32,7 @@
             }
           ]
         },
-        "Y": {
+        "Values": {
           "projections": [
             {
               "field": {
