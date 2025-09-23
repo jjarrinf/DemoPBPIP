@@ -1,5 +1,5 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
   "name": "5d16cce703c776ad72d6",
   "position": {
     "x": 650.9387755102041,
@@ -13,23 +13,7 @@
     "query": {
       "queryState": {
         "Category": {
-          "projections": [
-            {
-              "field": {
-                "Column": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "financials"
-                    }
-                  },
-                  "Property": "Country"
-                }
-              },
-              "queryRef": "financials.Country",
-              "nativeQueryRef": "Country",
-              "active": true
-            }
-          ]
+          "projections": []
         },
         "Y": {
           "projections": [

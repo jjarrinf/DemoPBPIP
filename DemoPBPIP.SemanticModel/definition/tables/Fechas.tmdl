@@ -13,7 +13,7 @@ table Fechas
 	column Año
 		formatString: 0
 		lineageTag: c68eb16e-0538-42dc-b037-ba77b30bbf4a
-		summarizeBy: none
+		summarizeBy: sum
 		isNameInferred
 		sourceColumn: [Año]
 
@@ -22,7 +22,7 @@ table Fechas
 	column 'Mes Nº'
 		formatString: 0
 		lineageTag: 185a3448-a6a1-4ece-98f8-12ba2544440c
-		summarizeBy: none
+		summarizeBy: sum
 		isNameInferred
 		sourceColumn: [Mes Nº]
 
@@ -55,7 +55,7 @@ table Fechas
 	column 'AñoMes (orden)'
 		formatString: 0
 		lineageTag: f1e112b4-2ae6-472e-82a6-fb2968f123fa
-		summarizeBy: none
+		summarizeBy: sum
 		isNameInferred
 		sourceColumn: [AñoMes (orden)]
 
@@ -64,7 +64,7 @@ table Fechas
 	column 'Trim Nº'
 		formatString: 0
 		lineageTag: 498f6447-e388-4af1-88d9-132a8ef79f6d
-		summarizeBy: none
+		summarizeBy: sum
 		isNameInferred
 		sourceColumn: [Trim Nº]
 
@@ -81,7 +81,7 @@ table Fechas
 	column 'Semana Año'
 		formatString: 0
 		lineageTag: 8c579ca8-1b38-4670-823b-8123af30eec2
-		summarizeBy: none
+		summarizeBy: sum
 		isNameInferred
 		sourceColumn: [Semana Año]
 
@@ -90,7 +90,7 @@ table Fechas
 	column Día
 		formatString: 0
 		lineageTag: 19dfbfe4-bf41-4a64-9b3e-a68a014dd655
-		summarizeBy: none
+		summarizeBy: sum
 		isNameInferred
 		sourceColumn: [Día]
 
@@ -99,7 +99,7 @@ table Fechas
 	column 'Día sem Nº'
 		formatString: 0
 		lineageTag: 24a4c40b-67d4-40da-93e6-b5ed73a386da
-		summarizeBy: none
+		summarizeBy: sum
 		isNameInferred
 		sourceColumn: [Día sem Nº]
 
