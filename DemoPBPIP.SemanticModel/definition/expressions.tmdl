@@ -5,14 +5,3 @@ expression DSPath = "C:\Code\DemoPBPIP\DataSource\" meta [IsParameterQuery=true,
 
 	annotation PBI_ResultType = Text
 
-expression 'De DirectQuery a AS: MS_DemoBPIP' =
-		let
-		    Source = AnalysisServices.Database("powerbi://api.powerbi.com/v1.0/myorg/WS_DEV_RRHH_CORP", "MS_DemoBPIP"),
-		    Cubes = Table.Combine(Source[Data]),
-		    Cube = Cubes{[Id="Model", Kind="Cube"]}[Data]
-		in
-		    Cube
-	lineageTag: 08e2eac4-140b-421b-8ea3-1603366d76e7
-
-	annotation PBI_IncludeFutureArtifacts = True
-

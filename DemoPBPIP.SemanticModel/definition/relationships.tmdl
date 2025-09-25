@@ -1,4 +1,4 @@
-relationship fce94974-0e38-4ea9-bcf7-e7f6d7d14365
+relationship AutoDetected_f5c9d9e3-7e5c-410a-a622-cdec11dd20f4
 	fromColumn: financials.MyDateTableId
 	toColumn: MyDateTable.Id
 

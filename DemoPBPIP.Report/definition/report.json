@@ -11,13 +11,13 @@
       "type": "SharedResources"
     },
     "customTheme": {
-      "name": "Custom26339261399405733.json",
+      "name": "Innovate",
       "reportVersionAtImport": {
         "visual": "2.1.0",
         "report": "2.1.0",
         "page": "2.0.0"
       },
-      "type": "RegisteredResources"
+      "type": "SharedResources"
     }
   },
   "objects": {
@@ -57,16 +57,10 @@
           "name": "CY24SU10",
           "path": "BaseThemes/CY24SU10.json",
           "type": "BaseTheme"
-        }
-      ]
-    },
-    {
-      "name": "RegisteredResources",
-      "type": "RegisteredResources",
-      "items": [
+        },
         {
-          "name": "Custom26339261399405733.json",
-          "path": "Custom26339261399405733.json",
+          "name": "Innovate",
+          "path": "BuiltInThemes/Innovate.json",
           "type": "CustomTheme"
         }
       ]

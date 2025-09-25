@@ -1,9 +1,9 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
   "name": "5d16cce703c776ad72d6",
   "position": {
-    "x": 661.22448979591832,
-    "y": 130.77551020408163,
+    "x": 650.9387755102041,
+    "y": 144,
     "z": 1000,
     "height": 279.18367346938777,
     "width": 555.42857142857144
@@ -13,23 +13,7 @@
     "query": {
       "queryState": {
         "Category": {
-          "projections": [
-            {
-              "field": {
-                "Column": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "financials"
-                    }
-                  },
-                  "Property": "Country"
-                }
-              },
-              "queryRef": "financials.Country",
-              "nativeQueryRef": "Country",
-              "active": true
-            }
-          ]
+          "projections": []
         },
         "Y": {
           "projections": [
