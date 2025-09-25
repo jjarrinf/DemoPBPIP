@@ -2,15 +2,15 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
   "name": "14fc47b61ef4cdb85fad",
   "position": {
-    "x": 58.775510204081634,
+    "x": 108.73469387755101,
     "y": 130.77551020408163,
     "z": 0,
     "height": 279.18367346938777,
-    "width": 502.53061224489795,
+    "width": 518.69387755102036,
     "tabOrder": 6000
   },
   "visual": {
-    "visualType": "stackedAreaChart",
+    "visualType": "barChart",
     "query": {
       "queryState": {
         "Category": {
@@ -20,14 +20,14 @@
                 "Column": {
                   "Expression": {
                     "SourceRef": {
-                      "Entity": "Fechas"
+                      "Entity": "MyDateTable"
                     }
                   },
-                  "Property": "Año-Mes (texto)"
+                  "Property": "Year"
                 }
               },
-              "queryRef": "Fechas.Año-Mes (texto)",
-              "nativeQueryRef": "Año-Mes (texto)",
+              "queryRef": "MyDateTable.Year",
+              "nativeQueryRef": "Year",
               "active": true
             }
           ]

@@ -10,20 +10,20 @@
       "nodes": [
         {
           "location": {
-            "x": 312.28016359918217,
-            "y": 226.24744376278119
+            "x": 584.87432074510957,
+            "y": 0
           },
           "nodeIndex": "Medidas",
           "nodeLineageTag": "421b6286-730f-4076-ae8b-1136f4b5e110",
           "size": {
-            "height": 218,
+            "height": 369.35399064362,
             "width": 234
           },
-          "zIndex": 2
+          "zIndex": 3
         },
         {
           "location": {
-            "x": 306.50511247443762,
+            "x": 839.29733195935148,
             "y": 0
           },
           "nodeIndex": "Fechas",
@@ -32,37 +32,37 @@
             "height": 200,
             "width": 234
           },
-          "zIndex": 3
+          "zIndex": 2
         },
         {
           "location": {
-            "x": 289.77505112474455,
-            "y": 72.1237218813906
+            "x": 320.2467820834309,
+            "y": 0
           },
           "nodeIndex": "financials",
-          "nodeLineageTag": "f1e7f35e-86a7-4c7e-b382-9c8a80e597c8",
+          "nodeLineageTag": "183edbf4-4a79-4d88-a964-bdc0027d921e",
           "size": {
             "height": 300,
             "width": 234
           },
-          "zIndex": 0
+          "zIndex": 1
         },
         {
           "location": {
-            "x": 306.50511247443762,
-            "y": 72.1237218813906
+            "x": 0,
+            "y": 0
           },
           "nodeIndex": "MyDateTable",
-          "nodeLineageTag": "a9888d5e-9a85-448f-b47b-9b8c90ee913b",
+          "nodeLineageTag": "dca4c642-6369-4d91-b9d5-826db0aaf5d5",
           "size": {
             "height": 300,
             "width": 234
           },
-          "zIndex": 0
+          "zIndex": 4
         }
       ],
       "name": "All tables",
-      "zoomValue": 89.724770642201833,
+      "zoomValue": 82.4819913882987,
       "pinKeyFieldsToTop": false,
       "showExtraHeaderInfo": false,
       "hideKeyFieldsWhenCollapsed": false,
