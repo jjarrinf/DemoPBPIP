@@ -1,19 +1,19 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.1.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.2.0/schema.json",
   "name": "5359ff62a4fe9d9527af",
   "position": {
-    "x": 58.775510204081634,
+    "x": 108.73469387755101,
     "y": 432,
     "z": 2000,
     "height": 255.67346938775509,
-    "width": 502.53061224489795,
+    "width": 518.69387755102036,
     "tabOrder": 1000
   },
   "visual": {
-    "visualType": "treemap",
+    "visualType": "lineClusteredColumnComboChart",
     "query": {
       "queryState": {
-        "Group": {
+        "Category": {
           "projections": [
             {
               "field": {
@@ -32,7 +32,7 @@
             }
           ]
         },
-        "Values": {
+        "Y": {
           "projections": [
             {
               "field": {
@@ -48,6 +48,24 @@
               "queryRef": "Medidas.Costo Unit Prom",
               "nativeQueryRef": "Costo Unit Prom",
               "format": "\"S/\" #,0;-\"S/\" #,0;\"S/\" #,0"
+            }
+          ]
+        },
+        "Y2": {
+          "projections": [
+            {
+              "field": {
+                "Measure": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Medidas"
+                    }
+                  },
+                  "Property": "Descuentos Totales"
+                }
+              },
+              "queryRef": "Medidas.Descuentos Totales",
+              "nativeQueryRef": "Descuentos Totales"
             }
           ]
         }

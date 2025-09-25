@@ -1,21 +1,24 @@
 table MyDateTable
-	lineageTag: a9888d5e-9a85-448f-b47b-9b8c90ee913b
+	lineageTag: dca4c642-6369-4d91-b9d5-826db0aaf5d5
+	sourceLineageTag: 0eab2b3b-54c3-4878-b49a-145ba5cc3160
 
 	column Date
 		dataType: dateTime
 		formatString: Long Date
-		lineageTag: adcd1fdb-2591-4d67-8e2b-4131ba676b4b
+		lineageTag: f56d653d-e313-4f62-adc0-1cc11ebe5f20
+		sourceLineageTag: ed771099-48b2-4bdc-a5ec-58fe040e8694
+		dataCategory: Uncategorized
 		summarizeBy: none
 		sourceColumn: Date
 
 		annotation SummarizationSetBy = Automatic
 
-		annotation UnderlyingDateTimeDataType = Date
-
 	column Year
 		dataType: int64
 		formatString: 0
-		lineageTag: 9e9377c0-e524-446f-b446-6ee1f2a6cccf
+		lineageTag: baf794a1-026c-4eb9-b8c9-ba179db6ed36
+		sourceLineageTag: 8689f0e6-88e7-4a42-be93-92015932b718
+		dataCategory: Uncategorized
 		summarizeBy: none
 		sourceColumn: Year
 
@@ -24,7 +27,9 @@ table MyDateTable
 	column Month
 		dataType: int64
 		formatString: 0
-		lineageTag: 8263516d-b7bd-439f-8123-fa69dee7066d
+		lineageTag: 797633fe-dbf7-47bb-89b0-03a830940af2
+		sourceLineageTag: ce1e3667-e378-4679-b522-bb669609840c
+		dataCategory: Uncategorized
 		summarizeBy: none
 		sourceColumn: Month
 
@@ -33,7 +38,9 @@ table MyDateTable
 	column Day
 		dataType: int64
 		formatString: 0
-		lineageTag: a1cdd249-ac65-4277-ad27-928370715403
+		lineageTag: 13f0e207-dd5d-4b64-a9d9-c57ce1425b43
+		sourceLineageTag: eab4f5f1-c613-493c-8e91-f2740bef605a
+		dataCategory: Uncategorized
 		summarizeBy: none
 		sourceColumn: Day
 
@@ -41,16 +48,20 @@ table MyDateTable
 
 	column Quarter
 		dataType: string
-		lineageTag: 89e9e3ee-88dc-4fe3-b3c2-ac0b0b1e77d6
+		lineageTag: 29d3adb1-5cc1-42f8-805a-750a0a171545
+		sourceLineageTag: 280cae87-ec9a-4b5d-9ba2-fb8694f3c966
+		dataCategory: Uncategorized
 		summarizeBy: none
 		sourceColumn: Quarter
 
-		annotation SummarizationSetBy = Automatic
+		annotation SummarizationSetBy = User
 
 	column PeriodWeek
 		dataType: int64
 		formatString: 0
-		lineageTag: 849fbe03-9c15-4816-b815-4a3258b55b2f
+		lineageTag: 039235b5-ead5-4a23-a689-a1ba53e9a635
+		sourceLineageTag: 8b2fcec2-00db-4024-b8c3-ee5bc4456dad
+		dataCategory: Uncategorized
 		summarizeBy: none
 		sourceColumn: PeriodWeek
 
@@ -58,16 +69,20 @@ table MyDateTable
 
 	column PeriodCampaign
 		dataType: string
-		lineageTag: 06b6e7fe-9927-44b0-9602-9d417f6e4a8f
+		lineageTag: f67422d7-791c-440b-8045-8c862c301da0
+		sourceLineageTag: 430936cb-0263-4e93-8004-20e21b085ea1
+		dataCategory: Uncategorized
 		summarizeBy: none
 		sourceColumn: PeriodCampaign
 
-		annotation SummarizationSetBy = Automatic
+		annotation SummarizationSetBy = User
 
 	column PeriodCampaignWeek
 		dataType: int64
 		formatString: 0
-		lineageTag: f0035e2a-fdfb-43ef-b11e-22167b51ba38
+		lineageTag: dbaf27f4-3d83-4433-91cc-1c3a9fbbbfff
+		sourceLineageTag: 9ec0dc59-323c-49ad-b8a4-d098f19bfb95
+		dataCategory: Uncategorized
 		summarizeBy: none
 		sourceColumn: PeriodCampaignWeek
 
@@ -76,7 +91,9 @@ table MyDateTable
 	column FiscalYear
 		dataType: int64
 		formatString: 0
-		lineageTag: eaf4deef-308d-4628-a79a-54714fcd7979
+		lineageTag: 2641c429-ec79-4498-92b2-67920dc891b5
+		sourceLineageTag: 0c8a7773-3be5-4ed7-90ad-21a0374c3634
+		dataCategory: Uncategorized
 		summarizeBy: none
 		sourceColumn: FiscalYear
 
@@ -84,8 +101,11 @@ table MyDateTable
 
 	column Id
 		dataType: int64
+		isNullable: false
 		formatString: 0
-		lineageTag: f37ad915-9b25-4d57-9ade-6b35913ed339
+		lineageTag: 3a6ec756-0118-40e6-8d70-65379b61421b
+		sourceLineageTag: 330c7488-9af8-4c61-80e3-0b925e0b83c3
+		dataCategory: Uncategorized
 		summarizeBy: none
 		sourceColumn: Id
 
@@ -93,24 +113,17 @@ table MyDateTable
 
 	column MonthInLetters
 		dataType: string
-		lineageTag: 7080a7fb-1655-4883-b944-030c3a228498
+		lineageTag: 54bc5689-9417-4d5b-928e-fcdc9f6ea455
+		sourceLineageTag: 697bd572-570e-4e9a-a6cc-6f8c0184b319
+		dataCategory: Uncategorized
 		summarizeBy: none
 		sourceColumn: MonthInLetters
 
-		annotation SummarizationSetBy = Automatic
+		annotation SummarizationSetBy = User
 
-	partition MyDateTable = m
-		mode: import
-		source =
-				let
-				    Source = Excel.Workbook(File.Contents(DSPath & "Financial Sample.xlsx"), null, true),
-				    MyDateTable_Sheet = Source{[Item="MyDateTable",Kind="Sheet"]}[Data],
-				    #"Promoted Headers" = Table.PromoteHeaders(MyDateTable_Sheet, [PromoteAllScalars=true]),
-				    #"Changed Type" = Table.TransformColumnTypes(#"Promoted Headers",{{"Date", type date}, {"Year", Int64.Type}, {"Month", Int64.Type}, {"Day", Int64.Type}, {"Quarter", type text}, {"PeriodWeek", Int64.Type}, {"PeriodCampaign", type text}, {"PeriodCampaignWeek", Int64.Type}, {"FiscalYear", Int64.Type}, {"Id", Int64.Type}, {"MonthInLetters", type text}})
-				in
-				    #"Changed Type"
-
-	annotation PBI_ResultType = Table
-
-	annotation PBI_NavigationStepName = Navigation
+	partition MyDateTable = entity
+		mode: directQuery
+		source
+			entityName: MyDateTable
+			expressionSource: 'De DirectQuery a AS: MS_DemoBPIP'
 
