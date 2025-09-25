@@ -1,198 +1,173 @@
 table financials
-	lineageTag: 183edbf4-4a79-4d88-a964-bdc0027d921e
-	sourceLineageTag: b7a57344-9beb-405c-a4de-fccdf0f8fcbd
+	lineageTag: 6bf649a9-c9f4-4e06-af86-efeee36a740d
 
 	column Segment
 		dataType: string
-		lineageTag: 6232a866-a416-46b2-bf88-362e65cdc731
-		sourceLineageTag: 3dfbd429-90f3-4712-935b-36f164a4031d
-		dataCategory: Uncategorized
+		lineageTag: a9ed66b3-9b29-48df-b794-87261438291b
 		summarizeBy: none
 		sourceColumn: Segment
 
-		annotation SummarizationSetBy = User
+		annotation SummarizationSetBy = Automatic
 
 	column Country
 		dataType: string
-		lineageTag: d90b3aad-6d82-4b48-aebd-926703fe7d75
-		sourceLineageTag: 8a63fb23-0907-4a59-9e27-cdc56e4cc3cb
-		dataCategory: Uncategorized
+		lineageTag: a41d4910-e7a6-42ff-a54c-6c5eaf7f83d9
 		summarizeBy: none
 		sourceColumn: Country
 
-		annotation SummarizationSetBy = User
+		annotation SummarizationSetBy = Automatic
 
 	column Product
 		dataType: string
-		lineageTag: cb81e21c-cd62-43ac-a509-bb460d2b0ad0
-		sourceLineageTag: 3b1f9f97-1fb8-479a-9d21-26c86ad9b4ef
-		dataCategory: Uncategorized
+		lineageTag: 65c6e785-5854-41be-a66d-aef8f10f4519
 		summarizeBy: none
 		sourceColumn: Product
 
-		annotation SummarizationSetBy = User
+		annotation SummarizationSetBy = Automatic
 
 	column 'Discount Band'
 		dataType: string
-		lineageTag: 6489b6b5-5d04-4f78-b6a6-b46e1cf2ff67
-		sourceLineageTag: a9a9847c-6ce1-42db-89de-4f687418e146
-		dataCategory: Uncategorized
+		lineageTag: 7047e258-7302-4cf3-8e6d-6a46794134f1
 		summarizeBy: none
 		sourceColumn: Discount Band
 
-		annotation SummarizationSetBy = User
+		annotation SummarizationSetBy = Automatic
 
 	column 'Units Sold'
 		dataType: double
-		lineageTag: c127cf17-c96c-4059-abf5-cdd3cfac7afe
-		sourceLineageTag: 46c4aa88-61d3-405e-a2a4-9dc75cdffbec
-		dataCategory: Uncategorized
+		lineageTag: 08aede3b-7a9e-4d68-ba00-760366040bd5
 		summarizeBy: sum
 		sourceColumn: Units Sold
 
-		annotation SummarizationSetBy = User
+		annotation SummarizationSetBy = Automatic
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	column 'Manufacturing Price'
-		dataType: double
-		lineageTag: 45467dfa-a610-4a22-a587-bae899169beb
-		sourceLineageTag: 3c15a2b7-5931-4cf2-b16e-9e39ac9a8762
-		dataCategory: Uncategorized
+		dataType: int64
+		formatString: 0
+		lineageTag: 8abd0b04-f19f-4ff5-800d-1f226789b226
 		summarizeBy: sum
 		sourceColumn: Manufacturing Price
 
-		annotation SummarizationSetBy = User
-
-		annotation PBI_FormatHint = {"isGeneralNumber":true}
+		annotation SummarizationSetBy = Automatic
 
 	column 'Sale Price'
 		dataType: int64
 		formatString: 0
-		lineageTag: 47272d2a-5ee2-4421-9aa1-5275edff9152
-		sourceLineageTag: aaf5838d-a492-43da-b63b-5a634d9e85e4
-		dataCategory: Uncategorized
+		lineageTag: cfced366-f014-4838-b440-138292a12f08
 		summarizeBy: sum
 		sourceColumn: Sale Price
 
-		annotation SummarizationSetBy = User
+		annotation SummarizationSetBy = Automatic
 
 	column 'Gross Sales'
 		dataType: double
-		lineageTag: 881d734e-0800-4446-80c0-efba61828c51
-		sourceLineageTag: 887a2c82-131b-45d5-8230-80daf51ccf0d
-		dataCategory: Uncategorized
+		lineageTag: 5e5ecb0d-5831-49f8-80c8-f0f080bc3206
 		summarizeBy: sum
 		sourceColumn: Gross Sales
 
-		annotation SummarizationSetBy = User
+		annotation SummarizationSetBy = Automatic
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	column Discounts
 		dataType: double
-		lineageTag: 335e71ff-12fd-4e42-9557-7c5fd56dc55c
-		sourceLineageTag: c4d62bdc-ee36-4900-a7fe-e00fbc87c28c
-		dataCategory: Uncategorized
+		lineageTag: 9fd7b3a8-0fab-4f89-bf66-7d06bfc1f90d
 		summarizeBy: sum
 		sourceColumn: Discounts
 
-		annotation SummarizationSetBy = User
+		annotation SummarizationSetBy = Automatic
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	column Sales
-		dataType: int64
-		formatString: 0
-		lineageTag: c0561a23-38df-4f36-9c5e-60608fc433ae
-		sourceLineageTag: f820f383-ad32-40ac-8a61-3756245ffa90
-		dataCategory: Uncategorized
+		dataType: double
+		lineageTag: 3b3c6097-9e93-424c-a6bf-dbdaf944e9b7
 		summarizeBy: sum
 		sourceColumn: Sales
 
-		annotation SummarizationSetBy = User
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	column COGS
 		dataType: double
-		lineageTag: f8fca363-4833-4061-a326-79cfe36c7f54
-		sourceLineageTag: 5e449375-0491-4d71-919d-3e052ba47b2d
-		dataCategory: Uncategorized
+		lineageTag: 93df9773-08a9-4ae1-ac70-c31e3f55ead4
 		summarizeBy: sum
 		sourceColumn: COGS
 
-		annotation SummarizationSetBy = User
+		annotation SummarizationSetBy = Automatic
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	column Profit
 		dataType: double
-		lineageTag: e1fbdce3-d605-41f5-bdb3-9f0a0be312b2
-		sourceLineageTag: b273bdf6-6d61-4d44-8421-38aac606853a
-		dataCategory: Uncategorized
+		lineageTag: eda0f048-aacc-4a9d-bd6a-cbaf50d719a2
 		summarizeBy: sum
 		sourceColumn: Profit
 
-		annotation SummarizationSetBy = User
+		annotation SummarizationSetBy = Automatic
 
 		annotation PBI_FormatHint = {"isGeneralNumber":true}
 
 	column Date
 		dataType: dateTime
 		formatString: Long Date
-		lineageTag: 6821156c-034f-45ff-9b3f-0c0ba87a444e
-		sourceLineageTag: 4cab4b5d-d2b7-4532-a195-549b6a95194e
-		dataCategory: Uncategorized
+		lineageTag: c4eb6832-6842-4d40-877c-57e1b49f66cc
 		summarizeBy: none
 		sourceColumn: Date
 
 		annotation SummarizationSetBy = Automatic
 
+		annotation UnderlyingDateTimeDataType = Date
+
 	column 'Month Number'
 		dataType: int64
 		formatString: 0
-		lineageTag: 53aefdca-7ea7-4119-8746-5f19f727c719
-		sourceLineageTag: eb61d895-8939-4558-940c-031079341246
-		dataCategory: Uncategorized
+		lineageTag: d890dba0-9810-4b6d-8320-c9284bc6301c
 		summarizeBy: sum
 		sourceColumn: Month Number
 
-		annotation SummarizationSetBy = User
+		annotation SummarizationSetBy = Automatic
 
 	column 'Month Name'
 		dataType: string
-		lineageTag: 442d8ca1-dfad-4c75-9f65-aae9c997cc56
-		sourceLineageTag: f9e33b27-e3fa-4555-9c96-a31e243270eb
-		dataCategory: Uncategorized
+		lineageTag: a16a971a-1a04-488e-9e7a-470203c6f680
 		summarizeBy: none
 		sourceColumn: Month Name
 
-		annotation SummarizationSetBy = User
+		annotation SummarizationSetBy = Automatic
 
 	column Year
 		dataType: int64
 		formatString: 0
-		lineageTag: f1269594-8bd4-468b-9080-1dcc626d738d
-		sourceLineageTag: 01775769-d6ff-48bc-b1ea-9e060526b350
-		dataCategory: Uncategorized
+		lineageTag: 1d703aa5-f71d-4773-bc7d-2ea125526954
 		summarizeBy: sum
 		sourceColumn: Year
 
-		annotation SummarizationSetBy = User
+		annotation SummarizationSetBy = Automatic
 
 	column MyDateTableId
 		dataType: int64
 		formatString: 0
-		lineageTag: 8227085d-377e-4eb4-b38c-25352601bf6f
-		sourceLineageTag: 9e2dba79-45b1-4535-82fd-fea5bbfb1876
-		dataCategory: Uncategorized
+		lineageTag: 5b5df04e-f960-4dad-a2ac-b7b8f9b0d6ef
 		summarizeBy: none
 		sourceColumn: MyDateTableId
 
 		annotation SummarizationSetBy = Automatic
 
-	partition financials = entity
-		mode: directQuery
-		source
-			entityName: financials
-			expressionSource: 'De DirectQuery a AS: MS_DemoBPIP'
+	partition financials = m
+		mode: import
+		source =
+				let
+				    Source = Excel.Workbook(File.Contents(DSPath & "Financial Sample.xlsx"), null, true),
+				    financials_Table = Source{[Item="financials",Kind="Table"]}[Data],
+				    #"Changed Type" = Table.TransformColumnTypes(financials_Table,{{"Segment", type text}, {"Country", type text}, {"Product", type text}, {"Discount Band", type text}, {"Units Sold", type number}, {"Manufacturing Price", Int64.Type}, {"Sale Price", Int64.Type}, {"Gross Sales", type number}, {"Discounts", type number}, {"Sales", type number}, {"COGS", type number}, {"Profit", type number}, {"Date", type date}, {"Month Number", Int64.Type}, {"Month Name", type text}, {"Year", Int64.Type}, {"MyDateTableId", Int64.Type}})
+				in
+				    #"Changed Type"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
 
