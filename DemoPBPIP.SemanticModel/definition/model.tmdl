@@ -14,8 +14,6 @@ annotation PBI_ProTooling = ["DevMode","Copilot","CopilotMeasureDescriptions"]
 
 annotation __TEdtr = 1
 
-annotation PBIDesktopVersion = 2.146.1454.0 (25.08)+901d6c338d1dea81ac3e53073ffb10469f0f37b8
-
 annotation BestPracticeAnalyzer_IgnoreRules = {"RuleIDs":[]}
 
 annotation BestPracticeAnalyzer_ExternalRuleFiles = ["https://raw.githubusercontent.com/microsoft/Analysis-Services/master/BestPracticeRules/Spanish/BPARules.json"]

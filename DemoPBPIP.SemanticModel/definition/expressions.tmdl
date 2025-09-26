@@ -1,4 +1,4 @@
-expression DSPath = "C:\Code\DemoPBPIP\DataSource\" meta [IsParameterQuery=true, Type="Text", IsParameterQueryRequired=true]
+expression DSPath = "D:\DemoGit\DemoPBPIP\DemoPBPIP\DataSource\" meta [IsParameterQuery=true, Type="Text", IsParameterQueryRequired=true]
 	lineageTag: 81dbadbb-daab-4ca1-a913-52c445a9581f
 
 	annotation PBI_NavigationStepName = Navigation
